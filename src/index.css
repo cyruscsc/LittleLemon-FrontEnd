@@ -41,9 +41,9 @@ body {
   align-items: center;
 }
 
-.flex-container > * {
+/* .flex-container > * {
   flex: 0 1 auto;
-}
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

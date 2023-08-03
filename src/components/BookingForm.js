@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BookingForm() {
+const BookingForm = props => {
   
 }
 

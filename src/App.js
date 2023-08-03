@@ -4,7 +4,7 @@ import BookingHero from './components/BookingHero';
 import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
 
-function App() {
+const App = () => {
   return (
     <>
       <Nav />

@@ -25,9 +25,13 @@
   padding: 0.5rem;
 }
 
-.navbar-list li {
+.navbar-list > li {
   display: block;
-  padding: 0 1rem;
+}
+
+.navbar-list > li > a {
+  display: block;
+  padding: 1rem;
 }
 
 .navbar-toggle {
@@ -47,10 +51,21 @@
   }
 
   .navbar-list {
-    /* display: none; */
     flex-direction: column;
     align-items: flex-start;
-    /* width: 100%; */
+    width: 100%;
+  }
+
+  .navbar-list.active {
+    display: flex;
+  }
+
+  .navbar-list.inactive {
+    display: none;
+  }
+
+  .navbar-list * {
+    width: 100%;
   }
 
   .navbar-container {

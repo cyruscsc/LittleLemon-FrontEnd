@@ -1,5 +1,5 @@
 import './App.css';
-import Nav from './components/Nav';
+import Navbar from './components/Navbar';
 import BookingHero from './components/BookingHero';
 import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 const App = () => {
   return (
     <>
-      <Nav />
+      <Navbar />
       <main>
         <BookingHero />
         <BookingForm />

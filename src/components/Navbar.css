@@ -10,7 +10,7 @@
 }
 
 .navbar {
-  background-color: var(--primary-color-white);
+  background-color: var(--secondary-color-white);
   color: var(--secondary-color-black);
   font-size: 1.25rem;
   font-weight: 800;

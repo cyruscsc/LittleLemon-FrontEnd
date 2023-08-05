@@ -37,6 +37,10 @@
   font-weight: 500;
 }
 
+legend.not-empty {
+  color: var(--primary-color-yellow);
+}
+
 .input-box:focus, .input-box.not-empty {
   border-color: var(--primary-color-yellow);
 }
@@ -120,4 +124,18 @@
   .button {
     width: 100%;
   }
+}
+
+.status-block {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.status-block.successful {
+  color: var(--primary-color-yellow);
+}
+
+.status-block.failed {
+  color: var(--secondary-color-orange);
 }

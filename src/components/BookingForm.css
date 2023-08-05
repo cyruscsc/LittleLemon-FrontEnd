@@ -14,6 +14,7 @@
 }
 
 .form-container {
+  padding: 1rem;
 }
 
 .input-container {
@@ -59,6 +60,22 @@
   bottom: 58px;
 }
 
+.seating-container {
+  padding-bottom: 1rem;;
+}
+
+.seating-container > legend {
+  padding-bottom: 0.5rem;
+}
+
+.seating-option {
+  padding: 0.5rem 1rem;
+}
+
+.seating-option > input {
+  margin-right: 1rem;;
+}
+
 .button {
   background-color: var(--primary-color-yellow);
   color: var(--secondary-color-black);
@@ -67,10 +84,19 @@
   padding: 0.75rem 2rem;
   border: 0;
   border-radius: 16px;
+  transition: 0.5s;
+}
+
+.button:disabled {
+  opacity: 25%;
 }
 
 @media only screen and (max-width: 768px) {
   .button {
     width: 100%;
   }
+}
+
+small {
+  display: block;
 }

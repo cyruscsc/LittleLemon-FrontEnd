@@ -11,6 +11,16 @@ const BookingForm = props => {
   const [lastName, setLastName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [specialRequest, setSpecialRequest] = React.useState("");
+
+  const isEmail = email => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
+
+  const formIsValid = () => {
+    return (
+      date && time && numDiners && occasion && seatOption &&
+      firstName && lastName && isEmail(email)
+    );
+  };
+
   return (
     <section id='bookingform'>
       <div className='super-container'>
@@ -51,13 +61,13 @@ const BookingForm = props => {
             </select>
             <label htmlFor='occasion'>Occasion</label>
           </div>
-          <div className='input-container'>
+          <div className='input-container seating-container'>
             <legend>Seating Options</legend>
-            <div>
+            <div className='seating-option'>
               <input type='radio' name='standard' value='standard' onChange={e => {setSeatOption(e.target.value);}} checked={seatOption==='standard' ? true : false} id='standard' />
               <label htmlFor='standard'>Standard</label>
             </div>
-            <div>
+            <div className='seating-option'>
               <input type='radio' name='outside' value='outside' onChange={e => {setSeatOption(e.target.value);}} checked={seatOption==='outside' ? true : false} id='outside' />
               <label htmlFor='outside'>Outside</label>
             </div>
@@ -79,7 +89,7 @@ const BookingForm = props => {
             <label htmlFor='specialRequest'>Special Request</label>
           </div>
           <div className='input-container'>
-            <button type='submit' className='button'>Book now</button>
+            <button type='submit' className='button' disabled={!formIsValid()}>Book now</button>
           </div>
         </form>
       </div>

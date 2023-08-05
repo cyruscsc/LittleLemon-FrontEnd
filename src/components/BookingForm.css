@@ -41,6 +41,31 @@
   border-color: var(--primary-color-yellow);
 }
 
+.input-box.required, .input-box.invalid {
+  border-color: var(--secondary-color-orange);
+  color: var(--secondary-color-orange);
+}
+
+.input-box.required + label, .input-box.required:focus + label, .input-box.invalid + label, .input-box.invalid:focus + label {
+  color: var(--secondary-color-orange) !important;
+}
+
+.required-text {
+  display: none;
+}
+
+.input-box.required + label > .required-text {
+  display: inline;
+}
+
+.invalid-text {
+  display: none;
+}
+
+.input-box.invalid + label > .invalid-text {
+  display: inline;
+}
+
 .input-container > label {
   position: relative;
   /* left: 0px; */
@@ -95,8 +120,4 @@
   .button {
     width: 100%;
   }
-}
-
-small {
-  display: block;
 }

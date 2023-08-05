@@ -1,0 +1,58 @@
+:root {
+  --title-font: 'Markazi Text', serif;
+  --text-font: 'Karla', sans-serif;
+  --primary-color-green: #495E57;
+  --primary-color-yellow: #F4CE14;
+  --secondary-color-orange: #EE9972;
+  --secondary-color-pink: #FBDABB;
+  --secondary-color-white: #EDEFEE;
+  --secondary-color-black: #333333;
+}
+
+#specials {
+  color: var(--secondary-color-black);
+}
+
+.special-items {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;;
+}
+
+@media only screen and (max-width: 768px) {
+  .special-items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .special-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+.special-item {
+  background-color: var(--secondary-color-white);
+  border-radius: 16px;
+}
+
+.card-image > img{
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.card-title {
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+
+.item-price {
+  color: var(--secondary-color-orange);
+}
+
+.card-paragraph {
+  padding: 1rem 1rem;
+}

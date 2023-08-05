@@ -1,18 +1,18 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import BookingHero from './components/BookingHero';
-import BookingForm from './components/BookingForm';
-import Footer from './components/Footer';
+import {Routes, Route} from 'react-router-dom';
+import Base from './components/Base/Base';
+import Home from './components/Home/Home';
+import Booking from './components/Booking/Booking';
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <main>
-        <BookingHero />
-        <BookingForm />
-      </main>
-      <Footer />
+      <Base>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/booking' element={<Booking />}/>
+        </Routes>
+      </Base>
     </>
   );
 }

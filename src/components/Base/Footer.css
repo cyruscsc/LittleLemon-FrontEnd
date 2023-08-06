@@ -1,0 +1,98 @@
+:root {
+  --title-font: 'Markazi Text', serif;
+  --text-font: 'Karla', sans-serif;
+  --primary-color-green: #495E57;
+  --primary-color-yellow: #F4CE14;
+  --secondary-color-orange: #EE9972;
+  --secondary-color-pink: #FBDABB;
+  --secondary-color-white: #EDEFEE;
+  --secondary-color-black: #333333;
+}
+
+#footer {
+  background-color: var(--secondary-color-black);
+  color: var(--secondary-color-white);
+  padding: 2.5rem 0;
+}
+
+.footer-container {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "logo contact connect"
+    "logo copyright copyright";
+  column-gap: 2rem;
+}
+
+.footer-logo {
+  grid-area: logo;
+}
+
+.footer-logo > img {
+  width: 6rem;
+  color: var(--secondary-color-white);
+}
+
+.footer-title {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.footer-contact {
+  grid-area: contact;
+}
+
+.contact-list > li {
+  padding: 0.25rem 0;
+}
+
+.footer-connect {
+  grid-area: connect;
+}
+
+.footer-socials > * {
+  margin-right: 1.5rem;
+}
+
+.footer-socials > a {
+  transition: 0.5s;
+}
+
+.footer-socials > a:link, .footer-socials > a:visited {
+  color: var(--secondary-color-white);
+}
+
+.footer-socials > a:hover {
+  color: var(--primary-color-yellow);
+}
+
+.footer-copyright {
+  grid-area: copyright;
+  text-align: start;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "logo contact"
+      "logo connect"
+      "copyright copyright";
+    row-gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "logo"
+      "contact"
+      "connect"
+      "copyright";
+    row-gap: 2rem;
+  }
+}

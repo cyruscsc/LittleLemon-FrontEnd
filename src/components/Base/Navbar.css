@@ -33,15 +33,22 @@
   padding: 1rem;
 }
 
+.navbar-list > li > a:link, .navbar-list > li > a:visited {
+  text-decoration: none;
+  color: var(--secondary-color-black);
+}
+
 .navbar-toggle {
   position: absolute;
-  top: .75rem;
+  top: 1.5rem;
   right: 1rem;
   display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
   height: 21px;
+  color: var(--secondary-color-black);
+  padding: 0;
 }
 
 @media only screen and (max-width: 768px) {

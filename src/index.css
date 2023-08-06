@@ -11,13 +11,9 @@
 
 * {
   list-style-type: none;
+  text-decoration: none;
   padding: 0;
   margin: 0;
-}
-
-a:link, a:visited {
-  text-decoration: none;
-  color: var(--secondary-color-black);
 }
 
 body {
@@ -62,6 +58,11 @@ body {
 .subtitle {
   font-size: 2.5rem;
   font-weight: 400;
+}
+
+.section-title {
+  text-align: center;
+  padding: 0 1rem 2.5rem 0;
 }
 
 .lead-text {

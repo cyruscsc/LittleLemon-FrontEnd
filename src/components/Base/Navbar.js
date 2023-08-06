@@ -1,7 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 
-const navLogoPath = '/images/lemon-yellow.png'
+const navLogoPath = './images/banner-yellow.png'
 
 const Navbar = props => {
   const [isActive, setIsActive] = React.useState(false);

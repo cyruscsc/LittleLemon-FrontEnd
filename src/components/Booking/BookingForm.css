@@ -11,6 +11,7 @@
 
 #bookingform {
   background-color: var(--primary-color-green);
+  padding-bottom: 2.5rem;
 }
 
 .form-container {

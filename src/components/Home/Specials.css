@@ -11,6 +11,7 @@
 
 #specials {
   color: var(--secondary-color-black);
+  padding: 2.5rem 0;
 }
 
 .special-items {
@@ -31,8 +32,15 @@
 }
 
 .special-item {
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
   background-color: var(--secondary-color-white);
   border-radius: 16px;
+}
+
+.special-item > a:link, .special-item > a:visited {
+  color: var(--secondary-color-black);
 }
 
 .card-image > img{

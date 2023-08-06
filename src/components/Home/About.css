@@ -1,0 +1,56 @@
+:root {
+  --title-font: 'Markazi Text', serif;
+  --text-font: 'Karla', sans-serif;
+  --primary-color-green: #495E57;
+  --primary-color-yellow: #F4CE14;
+  --secondary-color-orange: #EE9972;
+  --secondary-color-pink: #FBDABB;
+  --secondary-color-white: #EDEFEE;
+  --secondary-color-black: #333333;
+}
+
+#about {
+  padding: 5rem 0;
+}
+
+.about-container {
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-images {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-images > img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+}
+
+.about-heading {
+  padding-bottom: 1rem;
+}
+
+.about-title {
+  color: var(--primary-color-yellow);
+}
+
+.about-subtitle {
+  color: var(--primary-color-green);
+}
+
+.about-paragraph {
+  color: var(--secondary-color-black);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}

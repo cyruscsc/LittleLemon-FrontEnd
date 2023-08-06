@@ -5,7 +5,7 @@ const Specials = props => {
   return (
     <section id="specials">
       <div className="super-container">
-        <h2 className="subtitle section-title">Weekly Specials</h2>
+        <h2 className="subtitle section-title weekly-specials">Weekly Specials</h2>
         <div className="grid-container special-items">
           <article className="card special-item">
             <div className="card-image">

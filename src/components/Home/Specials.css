@@ -11,7 +11,12 @@
 
 #specials {
   color: var(--secondary-color-black);
-  padding: 2.5rem 0;
+  padding: 5rem 0 2.5rem 0;
+}
+
+.weekly-specials {
+  text-align: start;
+  margin-left: 1rem;
 }
 
 .special-items {

@@ -16,6 +16,8 @@
 
 .form-container {
   padding: 1rem;
+  max-width: 640px;
+  margin: auto;
 }
 
 .input-container {

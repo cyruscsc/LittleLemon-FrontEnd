@@ -45,6 +45,11 @@
 
 .contact-list > li {
   padding: 0.25rem 0;
+  transition: 0.25s;
+}
+
+.contact-list > li:hover {
+  color: var(--primary-color-yellow);
 }
 
 .footer-connect {
@@ -56,7 +61,7 @@
 }
 
 .footer-socials > a {
-  transition: 0.5s;
+  transition: 0.25s;
 }
 
 .footer-socials > a:link, .footer-socials > a:visited {

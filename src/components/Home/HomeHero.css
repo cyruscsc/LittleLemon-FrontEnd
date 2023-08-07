@@ -70,3 +70,11 @@
   position: relative;
   top: 2.5rem;
 }
+
+.food-image {
+  transition: 0.5s;
+}
+
+.food-image:hover {
+  transform: scale(1.05);
+}

@@ -18,10 +18,9 @@ const HomeHero = props => {
             </div>
           </div>
           <div className="hero-image-container">
-            <img src="./images/restaurant-food.jpg" alt="Restaurant Food"/>
+            <img src="./images/restaurant-food.jpg" alt="Restaurant Food" className="food-image"/>
           </div>
         </div>
-        
       </div>
     </section>
   );

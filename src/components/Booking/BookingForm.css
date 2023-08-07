@@ -1,16 +1,4 @@
-:root {
-  --title-font: 'Markazi Text', serif;
-  --text-font: 'Karla', sans-serif;
-  --primary-color-green: #495E57;
-  --primary-color-yellow: #F4CE14;
-  --secondary-color-orange: #EE9972;
-  --secondary-color-pink: #FBDABB;
-  --secondary-color-white: #EDEFEE;
-  --secondary-color-black: #333333;
-}
-
 #bookingform {
-  background-color: var(--primary-color-green);
   padding-bottom: 2.5rem;
 }
 
@@ -22,9 +10,6 @@
 
 .input-container {
   padding: 0.5rem 2rem 0 2rem;
-  color: var(--secondary-color-white);
-  font-size: 1.125rem;
-  font-weight: 700;
 }
 
 .input-box {
@@ -34,10 +19,6 @@
   border: 2px solid var(--secondary-color-black);
   border-radius: 8px;
   outline: none;
-  background-color: var(--primary-color-green);
-  color: var(--secondary-color-white);
-  font-size: 1rem;
-  font-weight: 500;
 }
 
 legend.not-empty {
@@ -75,11 +56,9 @@ legend.not-empty {
 
 .input-container > label {
   position: relative;
-  /* left: 0px; */
   bottom: 34px;
   padding: 0 0.5rem;
   margin: 1rem 0.5rem;
-  background: var(--primary-color-green);
   pointer-events: none;
   transition: 0.5s;
 }
@@ -88,7 +67,6 @@ legend.not-empty {
   background: var(--primary-color-green);
   color: var(--primary-color-yellow);
   font-size: 0.75rem;
-  /* padding-top: 0; */
   bottom: 58px;
 }
 
@@ -108,18 +86,12 @@ legend.not-empty {
   margin-right: 1rem;;
 }
 
-.button {
-  background-color: var(--primary-color-yellow);
-  color: var(--secondary-color-black);
-  font-size: 1.125rem;
-  font-weight: 700;
+.booking-button {
   padding: 0.75rem 2rem;
   border: 0;
-  border-radius: 16px;
-  transition: 0.5s;
 }
 
-.button:disabled {
+.booking-button:disabled {
   opacity: 25%;
 }
 
@@ -131,14 +103,4 @@ legend.not-empty {
 
 .status-block {
   padding: 1rem 2rem;
-  font-size: 1.125rem;
-  font-weight: 500;
-}
-
-.status-block.successful {
-  color: var(--primary-color-yellow);
-}
-
-.status-block.failed {
-  color: var(--secondary-color-orange);
 }

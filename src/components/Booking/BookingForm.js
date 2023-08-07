@@ -37,14 +37,14 @@ const BookingForm = props => {
   };
 
   return (
-    <section id='bookingform'>
+    <section id='bookingform' className='bg-green text-white bold-18'>
       <div className='super-container'>
         <form onSubmit={handleSubmit} className='form-container'>
           <div className='input-container'>
             <select name='date' value={date.value}
               onChange={e => {setDate({...date, value: e.target.value});}}
-              onBlur={() => setDate({...date, isTouch: true})} id='date'
-              className={`input-box ${date.value ? 'not-empty' : null } ${!date.value && date.isTouch ? 'required' : null}`}
+              onBlur={() => setDate({...date, isTouch: true})} required id='date'
+              className={`input-box bg-green text-white medium-16 ${date.value ? 'not-empty' : null } ${!date.value && date.isTouch ? 'required' : null}`}
             >
               <option value=''></option>
               <option value='value 1'>Value 1</option>
@@ -56,8 +56,8 @@ const BookingForm = props => {
           <div className='input-container'>
             <select name='time' value={time.value}
               onChange={e => {setTime({...time, value: e.target.value});}}
-              onBlur={() => setTime({...time, isTouch: true})} id='time'
-              className={`input-box ${time.value ? 'not-empty' : null } ${!time.value && time.isTouch ? 'required' : null}`}
+              onBlur={() => setTime({...time, isTouch: true})} required id='time'
+              className={`input-box bg-green text-white medium-16 ${time.value ? 'not-empty' : null } ${!time.value && time.isTouch ? 'required' : null}`}
             >
               <option value=''></option>
               <option value='value 1'>Value 1</option>
@@ -69,8 +69,8 @@ const BookingForm = props => {
           <div className='input-container'>
             <select name='numDiners' value={numDiners.value}
               onChange={e => {setNumDiners({...numDiners, value: e.target.value});}}
-              onBlur={() => setNumDiners({...numDiners, isTouch: true})} id='numDiners'
-              className={`input-box ${numDiners.value ? 'not-empty' : null } ${!numDiners.value && numDiners.isTouch ? 'required' : null}`}
+              onBlur={() => setNumDiners({...numDiners, isTouch: true})} required id='numDiners'
+              className={`input-box bg-green text-white medium-16 ${numDiners.value ? 'not-empty' : null } ${!numDiners.value && numDiners.isTouch ? 'required' : null}`}
             >
               <option value=''></option>
               <option value='value 1'>1-2</option>
@@ -82,7 +82,7 @@ const BookingForm = props => {
           <div className='input-container'>
             <select name='occasion' value={occasion}
               onChange={e => {setOccasion(e.target.value);}}
-              className={`input-box ${occasion ? 'not-empty' : null }`}
+              className={`input-box bg-green text-white medium-16 ${occasion ? 'not-empty' : null }`}
             >
               <option value=''></option>
               <option value='value 1'>Birthday</option>
@@ -105,36 +105,36 @@ const BookingForm = props => {
           <div className='input-container'>
             <input type='text' name='firstName' value={firstName.value}
               onChange={e => {setFirstName({...firstName, value: e.target.value});}}
-              onBlur={() => setFirstName({...firstName, isTouch: true})} id='firstName'
-              className={`input-box ${firstName.value ? 'not-empty' : null } ${!firstName.value && firstName.isTouch ? 'required' : null}`}
+              onBlur={() => setFirstName({...firstName, isTouch: true})} required id='firstName'
+              className={`input-box bg-green text-white medium-16 ${firstName.value ? 'not-empty' : null } ${!firstName.value && firstName.isTouch ? 'required' : null}`}
             />
             <label htmlFor='firstName'>First Name<span className='required-text'> - required</span></label>
           </div>
           <div className='input-container'>
             <input type='text' name='lastname' value={lastName.value}
               onChange={e => {setLastName({...lastName, value: e.target.value});}}
-              onBlur={() => setLastName({...lastName, isTouch: true})} id='lastname'
-              className={`input-box ${lastName.value ? 'not-empty' : null } ${!lastName.value && lastName.isTouch ? 'required' : null}`}
+              onBlur={() => setLastName({...lastName, isTouch: true})} required id='lastname'
+              className={`input-box bg-green text-white medium-16 ${lastName.value ? 'not-empty' : null } ${!lastName.value && lastName.isTouch ? 'required' : null}`}
             />
             <label htmlFor='lastName'>Last Name<span className='required-text'> - required</span></label>
           </div>
           <div className='input-container'>
             <input type='email' name='email' value={email.value}
               onChange={e => {setEmail({...email, value: e.target.value});}}
-              onBlur={() => setEmail({...email, isTouch: true})} id='email' 
-              className={`input-box ${email.value ? 'not-empty' : null } ${!email.value && email.isTouch ? 'required' : null} ${!isEmail(email.value) && email.isTouch ? 'invalid' : null}`}
+              onBlur={() => setEmail({...email, isTouch: true})} required id='email' 
+              className={`input-box bg-green text-white medium-16 ${email.value ? 'not-empty' : null } ${!email.value && email.isTouch ? 'required' : null} ${!isEmail(email.value) && email.isTouch ? 'invalid' : null}`}
             />
             <label htmlFor='email'>Email<span className='required-text'> - required</span><span className='invalid-text'> - invalid</span></label>
           </div>
           <div className='input-container'>
-            <input type='text' name='specialRequest' value={specialRequest} onChange={e => {setSpecialRequest(e.target.value);}} id='specialRequest' className={`input-box ${specialRequest ? 'not-empty' : null }`} />
+            <input type='text' name='specialRequest' value={specialRequest} onChange={e => {setSpecialRequest(e.target.value);}} id='specialRequest' className={`input-box bg-green text-white medium-16 ${specialRequest ? 'not-empty' : null }`} />
             <label htmlFor='specialRequest'>Special Request (optional)</label>
           </div>
           <div className='input-container'>
-            <button type='submit' className='button' disabled={!formIsValid()}>Book now</button>
+            <button type='submit' className='button bold-18 booking-button bg-yellow text-green button-text' disabled={!formIsValid()}>Book now</button>
           </div>
-          {isSuccessful && <div className='status-block successful'><p>Your booking is confirmed!</p></div>}
-          {isFailed && <div className='status-block failed'><p>Your booking is not successful, please try again!</p></div>}
+          {isSuccessful && <div className='status-block text-yellow medium-18'><p>Your booking is confirmed!</p></div>}
+          {isFailed && <div className='status-block text-orange medium-18'><p>Your booking is not successful, please try again!</p></div>}
         </form>
       </div>
     </section>

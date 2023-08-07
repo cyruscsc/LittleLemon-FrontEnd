@@ -2,17 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const navLogoPath = './images/banner-yellow.png'
-
 const Navbar = props => {
   const [isActive, setIsActive] = React.useState(false);
   const toggleNavbar = () => {
     setIsActive(!isActive);
   };
   return (
-    <nav className='navbar'>
+    <nav className='navbar bg-white'>
       <div className='super-container flex-container navbar-container'>
-        <Link to='/'><img src={navLogoPath} alt='Little Lemon Logo' className='navbar-logo'/></Link>
+        <Link to='/'><img src='./images/banner-yellow.png' alt='Little Lemon Logo' className='navbar-logo'/></Link>
         <a href='#' className='navbar-toggle' onClick={toggleNavbar}>
             <i class="fa-solid fa-bars"></i>
         </a>

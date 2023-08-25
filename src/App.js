@@ -9,7 +9,7 @@ import Login from './components/Login/Login';
 import './App.css';
 import Logout from './components/Logout/Logout';
 
-const backendDomain = 'http://127.0.0.1:8000';
+const backendDomain = 'http://localhost:8000';
 const defaultUserState = {
   user_id: '',
   username: '',
@@ -28,7 +28,6 @@ const App = () => {
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data);
       if (data.user_id) {
         setUser({
           ...user,
@@ -38,7 +37,6 @@ const App = () => {
           is_staff: data.is_staff
         });
       }
-      console.log(user);
     })
     .catch(err => {
       console.log(err);

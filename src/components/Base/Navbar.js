@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../UserContext';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = props => {
+  const [user, setUser] = useContext(UserContext);
   const [isActive, setIsActive] = React.useState(false);
   const toggleNavbar = () => {
     setIsActive(!isActive);
@@ -19,7 +21,8 @@ const Navbar = props => {
           <li><Link to='#' className='navbar-link'>MENU</Link></li>
           <li><Link to='/booking' className='navbar-link'>RESERVATION</Link></li>
           <li><Link to='#' className='navbar-link'>OUR STORY</Link></li>
-          <li><Link to='#' className='navbar-link'><i class="fa-solid fa-cart-shopping" /></Link></li>
+          { !user.user_id && <li><Link to='/login' className='navbar-link'><i class="fa-solid fa-right-to-bracket" /></Link></li>}
+          { user.user_id && <li><Link to='/logout' className='navbar-link'><i class="fa-solid fa-right-from-bracket" /></Link></li>}
         </ul>
       </div>
     </nav>

@@ -2,6 +2,32 @@
   padding-bottom: 2.5rem;
 }
 
+.login-message {
+  border: 3px solid var(--secondary-color-orange);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0 2rem;
+}
+
+.message-container {
+  padding: 1rem;
+  max-width: 640px;
+  margin: auto;
+}
+
+.login-link {
+  transition: 0.25s;
+}
+
+.login-link:link, .login-link:visited {
+  text-decoration: none;
+  color: var(--primary-color-yellow);
+}
+
+.login-link:hover, .login-link:active {
+  color: var(--secondary-color-orange);
+}
+
 .form-container {
   padding: 1rem;
   max-width: 640px;
@@ -12,6 +38,11 @@
   padding: 0.5rem 2rem 0 2rem;
 }
 
+.input-container > label {
+  display: block;
+  padding: 0.25rem;
+}
+
 .input-box {
   box-sizing: border-box;
   width: 100%;
@@ -19,6 +50,18 @@
   border: 2px solid var(--secondary-color-black);
   border-radius: 8px;
   outline: none;
+}
+
+#timeH, #timeM {
+  width: 48%;
+}
+
+#timeH {
+  margin-right: 2%;
+}
+
+#timeM {
+  margin-left: 2%;
 }
 
 legend.not-empty {
@@ -32,42 +75,6 @@ legend.not-empty {
 .input-box.required, .input-box.invalid {
   border-color: var(--secondary-color-orange);
   color: var(--secondary-color-orange);
-}
-
-.input-box.required + label, .input-box.required:focus + label, .input-box.invalid + label, .input-box.invalid:focus + label {
-  color: var(--secondary-color-orange) !important;
-}
-
-.required-text {
-  display: none;
-}
-
-.input-box.required + label > .required-text {
-  display: inline;
-}
-
-.invalid-text {
-  display: none;
-}
-
-.input-box.invalid + label > .invalid-text {
-  display: inline;
-}
-
-.input-container > label {
-  position: relative;
-  bottom: 34px;
-  padding: 0 0.5rem;
-  margin: 1rem 0.5rem;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-.input-box:focus + label, .input-box.not-empty + label {
-  background: var(--primary-color-green);
-  color: var(--primary-color-yellow);
-  font-size: 0.75rem;
-  bottom: 58px;
 }
 
 .seating-container {
@@ -88,6 +95,7 @@ legend.not-empty {
 
 .booking-button {
   padding: 0.75rem 2rem;
+  margin: 0.5rem;
   border: 0;
 }
 

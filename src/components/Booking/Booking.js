@@ -11,7 +11,7 @@ const Booking = props => {
     <>
       <BookingHero />
       { user.user_id && <MyBookings backendDomain={props.backendDomain} /> }
-      <BookingForm />
+      <BookingForm backendDomain={props.backendDomain} />
     </>
   );
 };

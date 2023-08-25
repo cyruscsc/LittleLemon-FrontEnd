@@ -27,9 +27,20 @@ const MyBookings = props => {
     getMyBookings();
   }, []);
 
+  const constructor = object => {
+    return (
+      <div key={object.id}>
+        <p>{object.id}</p>
+        <p>{object.date}</p>
+        <p>{object.time}</p>
+        <p>{object.num_guests}</p>
+      </div>
+    );
+  }
+
   return (
     <>
-      {myBookings.toString()}
+      {myBookings.map(booking => constructor(booking))}
     </>
   );
 }

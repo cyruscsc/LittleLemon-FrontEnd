@@ -7,7 +7,7 @@ function Footer() {
       <div className='super-container'>
         <div className='grid-container footer-container'>
           <div className='footer-logo'>
-            <img src='./images/frame-green.png' alt='Little Lemon' />
+            <img src='./images/frame-white.png' alt='Little Lemon' />
           </div>
           <div className='footer-contact'>
             <h3 className='footer-title'>CONTACT US</h3>

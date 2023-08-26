@@ -135,7 +135,7 @@ const Register = props => {
             <label htmlFor='password'>Password</label>
           </div>
           <div className='input-container'>
-            <button type='submit' className='button bold-18 booking-button bg-yellow text-green button-text' disabled={!validForm()}>Register</button>
+            <button type='submit' className='button bold-18 booking-button bg-yellow text-green' disabled={!validForm()}>Register</button>
           </div>
         </form>
       </div>

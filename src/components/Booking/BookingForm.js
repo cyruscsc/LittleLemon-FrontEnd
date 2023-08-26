@@ -130,7 +130,7 @@ const BookingForm = props => {
             />
           </div>
           <div className='input-container'>
-            <button type='submit' className='button bold-18 booking-button bg-yellow text-green button-text' disabled={!formIsValid()}>Book now</button>
+            <button type='submit' className='button bold-18 booking-button bg-yellow text-green' disabled={!formIsValid()}>Book now</button>
           </div>
           {isSuccessful && <div className='status-block text-yellow medium-18'><p>Your booking is confirmed!</p></div>}
           {isFailed && <div className='status-block text-orange medium-18'><p>Your booking is not successful, please try again!</p></div>}

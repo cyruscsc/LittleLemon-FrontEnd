@@ -64,7 +64,7 @@ const Login = props => {
             <label htmlFor='password'>Password</label>
           </div>
           <div className='input-container'>
-            <button type='submit' className='button bold-18 booking-button bg-yellow text-green button-text' disabled={!validForm()}>Login</button>
+            <button type='submit' className='button bold-18 booking-button bg-yellow text-green' disabled={!validForm()}>Login</button>
           </div>
         </form>
       </div>

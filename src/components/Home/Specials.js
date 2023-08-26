@@ -33,7 +33,7 @@ const Specials = props => {
           </article>
           <article className="card special-item">
             <div className="card-image">
-              <img src="./images/lemon-dessert.jpg" alt="Lemon Dessert" className="food-image" />
+              <img src="./images/lemon-cake.jpg" alt="Lemon Dessert" className="food-image" />
             </div>
             <a href="#" className="flex-container card-title">
               <h3>Lemon Dessert</h3>

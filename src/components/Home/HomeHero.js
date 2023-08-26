@@ -14,7 +14,7 @@ const HomeHero = props => {
               <p className='lead-text hero-lead-text text-white'>A family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
             </div>
             <div>
-              <Link to="/booking" className="button bold-18 homehero-button bg-yellow text-green button-text">Reserve a Table</Link>
+              <Link to="/booking" className="button bold-18 homehero-button bg-yellow text-green">Reserve a Table</Link>
             </div>
           </div>
           <div className="home-hero-image">

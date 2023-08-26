@@ -3,6 +3,7 @@ import { UserContext } from './UserContext';
 import { Routes, Route } from 'react-router-dom';
 import Base from './components/Base/Base';
 import Home from './components/Home/Home';
+import RestaurantMenu from './components/Menu/RestaurantMenu';
 import Booking from './components/Booking/Booking';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
@@ -48,17 +49,18 @@ const App = () => {
   }, []);
 
   return (
-    <UserContext.Provider value={providerValue}>
-      <Base>
-        <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/booking' element={<Booking backendDomain={backendDomain} />}/>
-          <Route path='/register' element={<Register backendDomain={backendDomain} />} />
-          <Route path='/login' element={<Login backendDomain={backendDomain} />} />
-          <Route path='/logout' element={<Logout backendDomain={backendDomain} defaultUserState={defaultUserState} />} />
-        </Routes>
-      </Base>
-    </UserContext.Provider>
+      <UserContext.Provider value={providerValue}>
+        <Base>
+          <Routes>
+            <Route path='/' element={<Home />}/>
+            <Route path='/menu' element={<RestaurantMenu backendDomain={backendDomain} />}/>
+            <Route path='/booking' element={<Booking backendDomain={backendDomain} />}/>
+            <Route path='/register' element={<Register backendDomain={backendDomain} />} />
+            <Route path='/login' element={<Login backendDomain={backendDomain} />} />
+            <Route path='/logout' element={<Logout backendDomain={backendDomain} defaultUserState={defaultUserState} />} />
+          </Routes>
+        </Base>
+      </UserContext.Provider>
   );
 }
 

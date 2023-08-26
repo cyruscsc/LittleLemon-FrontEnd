@@ -18,7 +18,7 @@ const Navbar = props => {
         </a>
         <ul className={`flex-container navbar-list ${isActive ? 'active' : 'inactive'}`}>
           <li><Link to='/' className='navbar-link'>HOME</Link></li>
-          <li><Link to='#' className='navbar-link'>MENU</Link></li>
+          <li><Link to='/menu' className='navbar-link'>MENU</Link></li>
           <li><Link to='/booking' className='navbar-link'>RESERVATION</Link></li>
           <li><Link to='#' className='navbar-link'>OUR STORY</Link></li>
           { !user.user_id && <li><Link to='/login' className='navbar-link'><i class="fa-solid fa-right-to-bracket" /></Link></li>}

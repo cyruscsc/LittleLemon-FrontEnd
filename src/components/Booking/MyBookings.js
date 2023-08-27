@@ -27,21 +27,32 @@ const MyBookings = props => {
     getMyBookings();
   }, []);
 
-  const constructor = object => {
+  const constructor = bookingObject => {
     return (
-      <div key={object.id}>
-        <p>{object.id}</p>
-        <p>{object.date}</p>
-        <p>{object.time}</p>
-        <p>{object.num_guests}</p>
-      </div>
+      <article className='grid-container booking bg-white' key={bookingObject.id}>
+        <div className='booking-detail'>
+          <h3><i class="fa-solid fa-calendar" />  {bookingObject.date}</h3>
+        </div>
+        <div className='booking-detail flex-container'>
+          <span><i class="fa-solid fa-clock" />  {bookingObject.time}</span>
+          <span><i class="fa-solid fa-user" />  {bookingObject.num_guests}</span>
+        </div>
+        <div className='booking-detail'>
+          <p><i class="fa-solid fa-envelope" />  {bookingObject.email}</p>
+        </div>
+      </article>
     );
   }
 
   return (
-    <>
-      {myBookings.map(booking => constructor(booking))}
-    </>
+    <section id='mybookings' className='bg-green'>
+      <div className='super-container'>
+        <h2 className='subtitle text-pink'>My Bookings</h2>
+        <div className='grid-container bookings-container'>
+          {myBookings.map(booking => constructor(booking))}
+        </div>
+      </div>
+    </section>
   );
 }
 

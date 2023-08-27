@@ -1,0 +1,16 @@
+.login-heading {
+  padding: 1rem 2rem;
+}
+
+.register-link {
+  transition: 0.25s;
+}
+
+.register-link:link, .register-link:visited {
+  text-decoration: none;
+  color: var(--primary-color-yellow);
+}
+
+.register-link:hover, .register-link:active {
+  color: var(--secondary-color-orange);
+}

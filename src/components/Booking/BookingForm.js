@@ -67,6 +67,7 @@ const BookingForm = props => {
   return (
     <section id='bookingform' className='bg-green text-white bold-18'>
       <div className='super-container'>
+        <h2 className='subtitle text-pink'>Book a Table</h2>
         {!user.user_id &&
           <div className='message-container'>
             <div className='login-message'>

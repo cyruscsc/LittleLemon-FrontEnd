@@ -1,0 +1,33 @@
+.invalid-message {
+  display: block;
+  color: var(--secondary-color-orange);
+  font-weight: 400;
+  padding: 0 0.25rem;
+}
+
+.password-message {
+  display: block;
+  color: var(--secondary-color-orange);
+  font-weight: 400;
+  padding: 0 0.25rem;
+  transition: 0.5s;
+}
+
+.password-message::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  font-size: 0.75rem;
+  content: '\f192';
+}
+
+.password-message.requirement-met {
+  color: var(--primary-color-yellow);
+}
+
+.password-message.requirement-met::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  font-size: 0.75rem;
+
+  content: '\f058';
+}

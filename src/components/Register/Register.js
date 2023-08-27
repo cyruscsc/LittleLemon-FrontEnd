@@ -8,6 +8,7 @@ const Register = props => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [password2, setPassword2] = useState('');
 
   const [usernameIsAvailable, setUsernameIsAvailable] = useState(false);
   const [usernameMsg, setUsernameMsg] = useState('');
@@ -21,10 +22,9 @@ const Register = props => {
   const validEmail = () => emailIsvalid() && emailIsAvailable;
   const passwordHasLength = () => password.length >= 6 && password.length <= 20;
   const passwordHasNum = () => /\d+/.test(password);
-  const passwordHasUpperChar = () => /[A-Z]+/.test(password);
-  const passwordHasLowerChar = () => /[a-z]+/.test(password);
-  const validPassword = () => passwordHasLength() && passwordHasNum() && passwordHasLowerChar() && passwordHasUpperChar();
-  const validForm = () => validUsername() && validEmail() && validPassword();
+  const passwordHasChar = () => /[A-z]+/.test(password);
+  const validPassword = () => passwordHasLength() && passwordHasNum() && passwordHasChar();
+  const validForm = () => validUsername() && validEmail() && validPassword() && password === password2;
 
   const checkUsername = e => {
     fetch(`${props.backendDomain}/api/checkusername`, {
@@ -108,31 +108,48 @@ const Register = props => {
   }
 
   return (
-    <section id='registerform'>
+    <section id='registerform' className='bg-green text-white bold-18'>
       <div className='super-container'>
+        <div className='login-heading'>
+          <h2 className='subtitle text-yellow'>Welcome to Little Lemon!</h2>
+          <p className='lead-text'>Register an account</p>
+        </div>
         <form onSubmit={handleSubmit} className='form-container'>
           <div className='input-container'>
+            <label htmlFor='username'>Username</label>
             <input type='text' name='username' value={username}
               onChange={e => {setUsername(e.target.value)}}
               onBlur={() => {checkUsername()}}
               required id='username' className='input-box bg-green text-white medium-16'
             />
-            <label htmlFor='username'>Username</label>
+            {usernameMsg && <small className='invalid-message'>{usernameMsg}</small>}
           </div>
           <div className='input-container'>
+            <label htmlFor='email'>Email</label>
             <input type='email' name='email' value={email}
               onChange={e => {setEmail(e.target.value)}}
               onBlur={() => {checkEmail()}}
               required id='email' className='input-box bg-green text-white medium-16'
             />
-            <label htmlFor='email'>Email</label>
+            {emailMsg && <small className='invalid-message'>{emailMsg}</small>}
           </div>
           <div className='input-container'>
+            <label htmlFor='password'>Password</label>
             <input type='password' name='password' value={password}
               onChange={e => {setPassword(e.target.value)}}
               required id='password' className='input-box bg-green text-white medium-16'
             />
-            <label htmlFor='password'>Password</label>
+            <small className={`password-message ${passwordHasLength() && 'requirement-met'}`}> Contains 6 to 20 characters</small>
+            <small className={`password-message ${passwordHasChar() && 'requirement-met'}`}> Contains at least 1 letter</small>
+            <small className={`password-message ${passwordHasNum() && 'requirement-met'}`}> Contains at least 1 number</small>
+          </div>
+          <div className='input-container'>
+            <label htmlFor='password2'>Enter password again</label>
+            <input type='password' name='password2' value={password2}
+              onChange={e => {setPassword2(e.target.value)}}
+              required id='password2' className='input-box bg-green text-white medium-16'
+            />
+            {password != password2 && <small className='invalid-message'>Please enter the same password</small>}
           </div>
           <div className='input-container'>
             <button type='submit' className='button bold-18 booking-button bg-yellow text-green' disabled={!validForm()}>Register</button>

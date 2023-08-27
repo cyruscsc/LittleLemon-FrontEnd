@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
-import { Navigate } from "react-router-dom";
-import { UserContext } from '../../UserContext';
+import { Navigate } from "react-router-dom"
+import { UserContext } from '../../UserContext'
+import './Logout.css'
 
 const Logout = props => {
   const [user, setUser] = useContext(UserContext);
@@ -24,9 +25,15 @@ const Logout = props => {
   }, []);
 
   return (
-    <>
-      {!user.user_id && <Navigate to='/' />}
-    </>
+    <section id='logout' className='bg-white'>
+      <div className='super-container'>
+        <div className=' grid-container logout-container bg-white'>
+          <h2>Loging out...</h2>
+          <p>You will be redirected to home page in 3 seconds.</p>
+          {!user.user_id && <Navigate to='/' />}
+        </div>
+      </div>
+    </section>
   );
 }
 

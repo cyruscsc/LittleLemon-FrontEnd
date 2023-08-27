@@ -1,0 +1,6 @@
+.logout-container {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

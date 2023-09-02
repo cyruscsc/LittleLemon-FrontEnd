@@ -10,7 +10,7 @@ import Login from './components/Login/Login';
 import './App.css';
 import Logout from './components/Logout/Logout';
 
-const backendDomain = 'http://localhost:8000';
+const backendDomain = 'http://littlelemon.cyruscsc.com';
 const defaultUserState = {
   user_id: '',
   username: '',

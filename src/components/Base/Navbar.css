@@ -50,9 +50,11 @@
   }
 
   .navbar-list {
+    background-color: var(--secondary-color-white);
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    transition: 0.25s;
   }
 
   .navbar-list.active {

@@ -31,14 +31,14 @@ const MyBookings = props => {
     return (
       <article className='grid-container booking bg-white' key={bookingObject.id}>
         <div className='booking-detail'>
-          <h3><i class="fa-solid fa-calendar" />  {bookingObject.date}</h3>
+          <h3><i className="fa-solid fa-calendar" />  {bookingObject.date}</h3>
         </div>
         <div className='booking-detail flex-container'>
-          <span><i class="fa-solid fa-clock" />  {bookingObject.time}</span>
-          <span><i class="fa-solid fa-user" />  {bookingObject.num_guests}</span>
+          <span><i className="fa-solid fa-clock" />  {bookingObject.time}</span>
+          <span><i className="fa-solid fa-user" />  {bookingObject.num_guests}</span>
         </div>
         <div className='booking-detail'>
-          <p><i class="fa-solid fa-envelope" />  {bookingObject.email}</p>
+          <p><i className="fa-solid fa-envelope" />  {bookingObject.email}</p>
         </div>
       </article>
     );

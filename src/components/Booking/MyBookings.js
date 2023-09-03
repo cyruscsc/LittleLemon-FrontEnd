@@ -49,7 +49,7 @@ const MyBookings = props => {
       <div className='super-container'>
         <h2 className='subtitle text-pink'>My Bookings</h2>
         <div className='grid-container bookings-container'>
-          {myBookings.map(booking => constructor(booking))}
+          {myBookings.length===0 ? <p className='text-white medium-16'>You don't have any booking yet.</p> : myBookings.map(booking => constructor(booking))}
         </div>
       </div>
     </section>

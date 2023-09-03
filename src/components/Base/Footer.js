@@ -23,8 +23,8 @@ function Footer() {
               <a href='https://www.facebook.com/' target='_blank'><i className="fa-brands fa-facebook-f" /></a>
               <a href='https://www.instagram.com/' target='_blank'><i className="fa-brands fa-instagram" /></a>
               <a href='https://twitter.com/' target='_blank'><i className="fa-brands fa-x-twitter" /></a>
-              <a href='https://www.linkedin.com/in/cyruscsc/' target='_blank'><i class="fa-brands fa-linkedin-in" /></a>
-              <a href='https://github.com/cyruscsc/' target='_blank'><i class="fa-brands fa-github" /></a>
+              <a href='https://www.linkedin.com/in/cyruscsc/' target='_blank'><i className="fa-brands fa-linkedin-in" /></a>
+              <a href='https://github.com/cyruscsc/' target='_blank'><i className="fa-brands fa-github" /></a>
             </div>
           </div>
           <div className='footer-copyright'>

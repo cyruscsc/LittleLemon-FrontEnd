@@ -10,12 +10,12 @@ import Login from './components/Login/Login';
 import './App.css';
 import Logout from './components/Logout/Logout';
 
-const backendDomain = 'http://littlelemon.cyruscsc.com';
+const backendDomain = 'https://littlelemon.cyruscsc.com';
 const defaultUserState = {
   user_id: '',
   username: '',
   email: '',
-  is_staff: ''
+  is_staff: '',
 };
 
 const App = () => {
@@ -27,41 +27,61 @@ const App = () => {
       method: 'GET',
       credentials: 'include',
     })
-    .then(res => res.json())
-    .then(data => {
-      if (data.user_id) {
-        setUser({
-          ...user,
-          user_id: data.user_id,
-          username: data.username,
-          email: data.email,
-          is_staff: data.is_staff
-        });
-      }
-    })
-    .catch(err => {
-      console.log(err);
-    });
-  }
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.user_id) {
+          setUser({
+            ...user,
+            user_id: data.user_id,
+            username: data.username,
+            email: data.email,
+            is_staff: data.is_staff,
+          });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   useEffect(() => {
     getUser();
   }, []);
 
   return (
-      <UserContext.Provider value={providerValue}>
-        <Base>
-          <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/menu' element={<RestaurantMenu backendDomain={backendDomain} />}/>
-            <Route path='/booking' element={<Booking backendDomain={backendDomain} />}/>
-            <Route path='/register' element={<Register backendDomain={backendDomain} />} />
-            <Route path='/login' element={<Login backendDomain={backendDomain} />} />
-            <Route path='/logout' element={<Logout backendDomain={backendDomain} defaultUserState={defaultUserState} />} />
-          </Routes>
-        </Base>
-      </UserContext.Provider>
+    <UserContext.Provider value={providerValue}>
+      <Base>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route
+            path='/menu'
+            element={<RestaurantMenu backendDomain={backendDomain} />}
+          />
+          <Route
+            path='/booking'
+            element={<Booking backendDomain={backendDomain} />}
+          />
+          <Route
+            path='/register'
+            element={<Register backendDomain={backendDomain} />}
+          />
+          <Route
+            path='/login'
+            element={<Login backendDomain={backendDomain} />}
+          />
+          <Route
+            path='/logout'
+            element={
+              <Logout
+                backendDomain={backendDomain}
+                defaultUserState={defaultUserState}
+              />
+            }
+          />
+        </Routes>
+      </Base>
+    </UserContext.Provider>
   );
-}
+};
 
 export default App;

@@ -1,7 +1,7 @@
 import jd from '../assets/images/jd.png'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
-const ImageInput = ({ label, image, onPress, ...props }) => {
+const ImageInput = ({ label, image, onPress }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>

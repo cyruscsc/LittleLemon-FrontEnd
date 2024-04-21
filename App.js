@@ -12,8 +12,8 @@ export default function App() {
 
   if (!fontsLoaded) {
     return (
-      <SafeAreaView style={styles.container}>
-        <Text>Loading...</Text>
+      <SafeAreaView style={styles.loading}>
+        <Text>Preparing menu...</Text>
       </SafeAreaView>
     )
   }
@@ -29,6 +29,11 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  loading: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   container: {
     flex: 1,
   },

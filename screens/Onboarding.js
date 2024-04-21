@@ -11,7 +11,7 @@ const Onboarding = ({ navigation }) => {
 
   useEffect(() => {
     fetchStorage()
-    firstName && email && navigation.navigate('Profile')
+    firstName && email && navigation.navigate('Home')
   }, [])
 
   const validEmail = validateEmail(email)
@@ -27,7 +27,7 @@ const Onboarding = ({ navigation }) => {
       ['firstName', firstName],
       ['email', email],
     ])
-    navigation.navigate('Profile')
+    navigation.navigate('Home')
   }
 
   return (

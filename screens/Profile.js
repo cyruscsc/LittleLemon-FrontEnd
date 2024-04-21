@@ -98,7 +98,7 @@ const Profile = ({ navigation }) => {
 
   return (
     <KeyboardFriendly>
-      <Header />
+      <Header toMenu={() => navigation.navigate('Home')} />
       <ScrollView keyboardDismissMode='on-drag'>
         <View style={styles.form}>
           <Text style={styles.text}>Profile</Text>

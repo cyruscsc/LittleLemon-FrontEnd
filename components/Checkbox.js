@@ -1,6 +1,5 @@
 import BouncyCheckbox from 'react-native-bouncy-checkbox'
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 
 const Checkbox = ({ label, isChecked, onPress }) => {
   return (

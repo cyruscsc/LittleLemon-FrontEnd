@@ -24,13 +24,14 @@ const styles = StyleSheet.create({
   label: {
     fontFamily: 'Karla-Regular',
     fontSize: 16,
+    color: '#495E57',
     paddingHorizontal: 4,
   },
   input: {
     fontFamily: 'Karla-Regular',
     fontSize: 20,
     color: '#333333',
-    borderColor: '#333333',
+    borderColor: '#495E57',
     borderWidth: 1,
     borderRadius: 8,
     padding: 8,

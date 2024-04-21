@@ -1,7 +1,6 @@
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView, StyleSheet, Text } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
 import { useFonts } from 'expo-font'
-import { Onboarding } from './screens'
 import { NavigationContainer } from '@react-navigation/native'
 import { RootNavigator } from './navigators'
 
@@ -11,11 +10,21 @@ export default function App() {
     'Karla-Regular': require('./assets/fonts/Karla-Regular.ttf'),
   })
 
+  if (!fontsLoaded) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <Text>Loading...</Text>
+      </SafeAreaView>
+    )
+  }
+
   return (
-    <NavigationContainer>
-      <StatusBar style='auto' />
-      <RootNavigator />
-    </NavigationContainer>
+    <SafeAreaView style={styles.container}>
+      <NavigationContainer>
+        <StatusBar style='auto' />
+        <RootNavigator />
+      </NavigationContainer>
+    </SafeAreaView>
   )
 }
 

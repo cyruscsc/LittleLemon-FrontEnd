@@ -27,6 +27,7 @@ export default KeyboardFriendly
 const styles = StyleSheet.create({
   layout: {
     flex: 1,
+    backgroundColor: '#FFFFFF',
   },
   main: {
     flex: 1,
